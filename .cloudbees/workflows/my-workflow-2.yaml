@@ -8,8 +8,8 @@ on:
 jobs:
   build:
     steps:
-      - name: Build with Gradle
-        uses: docker://gradle:latest
-        shell: sh
-    run: |
-      ./gradlew build
+     - name: Build with Gradle
+       uses: docker://gradle:latest
+       shell: sh
+    commands:
+          - ./gradlew build
