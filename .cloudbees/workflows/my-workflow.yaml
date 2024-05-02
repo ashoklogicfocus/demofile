@@ -7,12 +7,11 @@ on:
     branches:
       - 'master'
 
-stages:
-  - build
-build:
-  stage: build
-  image: gradle:8.3
-  script:
-    - echo "Building Application"
-    - chmod -R 777 gradlew 
-    - ./gradlew build
+ci-job:
+    steps:
+      
+      - name: Build Gradle project
+        uses: docker://gradle:latest
+        run: |
+          ./gradlew build
+
