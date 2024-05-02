@@ -12,4 +12,5 @@ jobs:
         uses: docker://gradle:latest
         shell: sh
         run: |
+          chmod -R 777 gradlew
           ./gradlew build
