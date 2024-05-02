@@ -1,17 +1,14 @@
-apiVersion: automation.cloudbees.io/v1alpha1
-kind: workflow
-name: My workflow
+stages:
+  - build
 
-on:
-  push:
-    branches:
-      - '**'
+build:
+  stage: build
+  image: gradle:8.3
+  script:
+    - echo "Building Application"
+    - chmod -R 777 gradlew 
+    - ./gradlew build
 
-jobs:
-  build:
-    steps:
-      - name: Say hello
-        uses: docker://golang:1.20.3-alpine3.17
-        shell: sh
-        run: |
-          ./gradlew build
+
+
+          
