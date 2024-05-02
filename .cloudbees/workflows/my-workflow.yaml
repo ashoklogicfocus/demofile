@@ -1,6 +1,9 @@
+on:
+  push:
+    branches:
+      - master
 stages:
   - build
-
 build:
   stage: build
   image: gradle:8.3
@@ -9,6 +12,3 @@ build:
     - chmod -R 777 gradlew 
     - ./gradlew build
 
-
-
-          
