@@ -11,6 +11,5 @@ jobs:
       - name: Build with Gradle
         uses: docker://gradle:latest
         shell: sh
-        run: |
-          chmod -R 777 gradlew
-          ./gradlew build
+    run: |
+      ./gradlew build
