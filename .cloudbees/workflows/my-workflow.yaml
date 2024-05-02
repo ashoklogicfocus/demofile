@@ -24,7 +24,3 @@ jobs:
         with:
           gradle-version: '7.3'
           gradle-args: 'build'
-
-
-
-
